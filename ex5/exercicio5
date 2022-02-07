@@ -1,0 +1,6 @@
+SELECT * FROM aluno
+INNER JOIN endereco ON aluno.id = endereco.fk_aluno_id;
+
+SELECT * FROM aluno
+INNER JOIN endereco ON aluno.id = endereco.fk_aluno_id
+WHERE LOWER (aluno.nome) LIKE LOWER ('%a%');

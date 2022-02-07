@@ -1,0 +1,10 @@
+SELECT 
+	curso.nome "Nome do curso",
+	curso.semestre "Quantidade de Semestres",
+	professor.nome "Nome do professor",
+	professor.graduacao "Formação do professor",
+	professor.fone "Fone do professor",
+	disciplina.nome "Nome da disciplina"
+	FROM curso
+	INNER JOIN disciplina ON curso.id = disciplina.fk_curso_id
+	INNER JOIN professor ON professor.id = disciplina.fk_professor_id;

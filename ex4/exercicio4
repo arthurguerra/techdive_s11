@@ -1,0 +1,82 @@
+INSERT INTO public.aluno(
+	nome, fone, cpf, dtnasc, sexo)
+	VALUES ('Alfredo', '(48)987654321', '99999999999', '15/07/1980', 'Masculino');
+
+INSERT INTO public.aluno(
+	nome, fone, cpf, dtnasc, sexo)
+	VALUES ('Thiago', '48987654321', '999.999.999-99', '1/07/1980', 'M');
+
+INSERT INTO public.aluno(
+	nome, fone, cpf, dtnasc, sexo)
+	VALUES ('Daniela', '(48)98765-4321', '99999999999', '07/12/1980', 'Feminino');
+
+INSERT INTO public.aluno(
+	nome, fone, cpf, dtnasc, sexo)
+	VALUES ('Caique', '(048)987654321', '99999999999', '30/01/2000', 'M');
+
+INSERT INTO public.aluno(
+	nome, fone, cpf, dtnasc, sexo)
+	VALUES ('Beatriz', '+55048987654321', '99999999999', '29/12/2009', 'F');
+
+	
+INSERT INTO public.endereco(
+	rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Rua 1', '1', 'Bairro 1', 'Cidade 1', 'Estado 1', 'Complemento 1', 5);	
+
+INSERT INTO public.endereco(
+	rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Rua 2', 2, 'Bairro 2', 'Cidade 2', 'Estado 2', 'Complemento 2', 6);	
+
+INSERT INTO public.endereco(
+	rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Rua 3', 3, 'Bairro 3', 'Cidade 3', 'Estado 3', 'Complemento 3', 7);	
+
+INSERT INTO public.endereco(
+	rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Rua 4', '4', 'Bairro 4', 'Cidade 4', 'Estado 4', 'Complemento 4', 8);	
+
+INSERT INTO public.endereco(
+	rua, numero, bairro, cidade, estado, outros, fk_aluno_id)
+	VALUES ('Rua 5', 5, 'Bairro5 ', 'Cidade  5', 'Estado 5', 'Complemento 5', 9);
+	
+
+INSERT INTO public.curso(
+	nome, semestre)
+	VALUES ('Matemática', 10);
+
+INSERT INTO public.curso(
+	nome, semestre)
+	VALUES ('TechDive', 9);
+
+INSERT INTO public.curso(
+	nome, semestre)
+	VALUES ('Java', 3);
+
+INSERT INTO public.curso(
+	nome, semestre)
+	VALUES ('REST', 1);
+
+INSERT INTO public.curso(
+	nome, semestre)
+	VALUES ('Linux', 6);
+
+
+INSERT INTO public.professor(
+	nome, graduacao, fone)
+	VALUES ('João', 'Ciência da Computação', '48987654321');
+
+INSERT INTO public.professor(
+	nome, graduacao, fone)
+	VALUES ('Elder', 'Sistemas da Informação', '48987654321');
+
+INSERT INTO public.professor(
+	nome, graduacao, fone)
+	VALUES ('Cezar', 'Ciência da Computação', '48987654321');
+
+INSERT INTO public.professor(
+	nome, graduacao, fone)
+	VALUES ('Alessandra', 'Ciência de Dados', '48987654321');
+
+INSERT INTO public.professor(
+	nome, graduacao, fone)
+	VALUES ('Thiago', 'Ciência de Dados', '48987654321');

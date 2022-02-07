@@ -1,0 +1,3 @@
+SELECT * FROM aluno
+LEFT JOIN endereco on endereco.fk_aluno_id = aluno.id
+ORDER BY aluno.nome;

@@ -1,0 +1,37 @@
+CREATE TABLE Disciplina (
+    Id INTEGER PRIMARY KEY NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    Nome VARCHAR NOT NULL,
+    fk_Professor_Id INTEGER NOT NULL,
+    fk_Curso_Id INTEGER NOT NULL
+);
+ 
+ALTER TABLE Disciplina ADD CONSTRAINT FK_Disciplina_1
+    FOREIGN KEY (fk_Professor_Id)
+    REFERENCES Professor (Id)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Disciplina ADD CONSTRAINT FK_Disciplina_2
+    FOREIGN KEY (fk_Curso_Id)
+    REFERENCES Curso (Id)
+    ON DELETE RESTRICT;
+	
+	
+INSERT INTO public.disciplina(
+	nome, fk_professor_id, fk_curso_id)
+	VALUES ('Cálculo A', 1, 1);
+	
+INSERT INTO public.disciplina(
+	nome, fk_professor_id, fk_curso_id)
+	VALUES ('HTML', 2, 2);
+	
+INSERT INTO public.disciplina(
+	nome, fk_professor_id, fk_curso_id)
+	VALUES ('Cálculo B', 1, 1);
+	
+INSERT INTO public.disciplina(
+	nome, fk_professor_id, fk_curso_id)
+	VALUES ('CSS', 3, 2);
+	
+INSERT INTO public.disciplina(
+	nome, fk_professor_id, fk_curso_id)
+	VALUES ('Java SE', 4, 3);
