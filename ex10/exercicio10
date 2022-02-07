@@ -1,0 +1,30 @@
+SELECT 
+	aluno.nome,
+	aluno.fone,
+	aluno.cpf,
+	aluno.dtnasc,
+	aluno.sexo,
+	endereco.rua,
+	endereco.numero,
+	endereco.bairro,
+	endereco.cidade,
+	endereco.estado,
+	endereco.outros,	
+	curso.nome,
+	curso.semestre,
+	professor.nome,
+	professor.graduacao,
+	professor.fone,
+	matricula.id,
+	matricula.data_matricula
+	FROM aluno
+	INNER JOIN endereco ON
+	aluno.id = endereco.fk_aluno_id
+	INNER JOIN matricula ON
+	aluno.id = matricula.fk_aluno_id
+	INNER JOIN curso ON
+	matricula.fk_curso_id = curso.id
+	INNER JOIN disciplina ON
+	curso.id = disciplina.fk_curso_id
+	INNER JOIN professor ON
+	disciplina.fk_professor_id = professor.id;
